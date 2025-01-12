@@ -1,5 +1,4 @@
 import Image from "next/image";
-import stars from "../public/stars.svg";
 import caret from "../public/caret.svg";
 import dashboard from "../public/dashboard.svg";
 // import dashboard2 from "../public/dashboard.png"
@@ -9,6 +8,7 @@ import heroGrad from "../public/hero-gradient.png";
 import Link from "next/link";
 import { VerticalMarquee } from "@/components/VerticalMarquee";
 import TestimonialCard from "@/components/TestimonialCard";
+import { HeroBanner } from "@/components/HeroBanner";
 
 export default function Home() {
   return (
@@ -26,16 +26,7 @@ export default function Home() {
         />
 
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
-          <Link
-            href="/"
-            className="flex items-center rounded-[100px] bg-pill-radial px-[14px] py-[5px] shadow-pill backdrop-blur-[7.5px]"
-          >
-            <Image src={stars} alt="Stars" />
-            <h5 className="pl-1.5 pr-2 text-sm font-medium leading-[150%] tracking-[-0.14px] text-white/90">
-              Introducing Insights
-            </h5>
-            <Image src={caret} alt="Chevron right" className="" />
-          </Link>
+          <HeroBanner />
 
           <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-[64px] font-medium leading-[120%] tracking-[-0.64px] text-transparent">
             The Snowflake optimization and cost management platform
