@@ -1,19 +1,18 @@
 import Image from "next/image";
-import React from "react";
 import logo from "../public/logo.svg";
 import chevron from "../public/chevron.svg";
 import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="px-4 py-3 border border-[#2F3440CC] rounded-[14px] w-full max-w-[1272px] mx-auto mt-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-[7.5px]">
+    <nav className="fixed left-0 right-0 top-0 z-50 mx-auto mt-4 w-full max-w-[1272px] rounded-[14px] border border-[#2F3440CC] px-4 py-3 backdrop-blur-[7.5px]">
       <div className="grid grid-cols-3 items-center">
         <div className="justify-self-start">
           <Image src={logo} alt="Select logo" />
         </div>
 
-        <div className="justify-self-center flex gap-8 items-center">
-          <div className="flex items-center gap-1 cursor-pointer">
+        <div className="flex items-center gap-8 justify-self-center">
+          <div className="flex cursor-pointer items-center gap-1">
             <h4 className="text-sm leading-[150%] tracking-[0.14px]">
               Features
             </h4>
@@ -33,7 +32,7 @@ function Navbar() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-1 cursor-pointer">
+          <div className="flex cursor-pointer items-center gap-1">
             <h4 className="text-sm leading-[150%] tracking-[0.14px]">
               Resources
             </h4>
@@ -54,7 +53,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="justify-self-end flex items-center gap-5">
+        <div className="flex items-center gap-5 justify-self-end">
           <Link
             href="/login"
             className="text-sm leading-[150%] tracking-[0.14px] text-[#FFFFFFCC]"
@@ -63,7 +62,7 @@ function Navbar() {
           </Link>
           <Link
             href="https://cal.com/"
-            className="bg-[#0CA6E9] text-white px-3 py-1.5 rounded-lg text-sm font-medium leading-[150%] tracking-[0.14px] shadow-btn"
+            className="rounded-lg bg-[#0CA6E9] px-3 py-1.5 text-sm font-medium leading-[150%] tracking-[-0.14px] text-white shadow-btn"
           >
             Book a Demo
           </Link>
