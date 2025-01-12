@@ -1,6 +1,6 @@
 import Image from "next/image";
 import caret from "../public/caret.svg";
-import dashboard from "../public/dashboard.svg";
+import dashboard from "../public/dashboardx1.5.png";
 import heroGrain from "../public/hero-grain.png";
 
 import { VerticalMarquee } from "@/components/VerticalMarquee";
@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
           <HeroBanner />
 
-          <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-3xl font-medium lg:!leading-[120%] tracking-[-0.64px] text-transparent md:text-5xl lg:text-[64px]">
+          <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-3xl font-medium tracking-[-0.64px] text-transparent md:text-5xl lg:text-[64px] lg:!leading-[120%]">
             The Snowflake optimization and cost management platform
           </h1>
 
@@ -51,7 +51,12 @@ export default function Home() {
         <div className="relative flex w-full items-center justify-center px-0 lg:px-[100px]">
           <div className="absolute -top-[400px] -z-10 hidden h-[500px] w-full max-w-[1027px] bg-hero-radial opacity-40 md:block lg:-top-[467px]" />
 
-          <Image src={dashboard} alt="Dashboard" className="" />
+          <Image
+            src={dashboard}
+            alt="Dashboard"
+            className="w-full max-w-[1242px]"
+            priority
+          />
         </div>
       </section>
 
