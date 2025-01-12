@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   title: "SELECT | Snowflake optimization & cost management platform",
   description:
     "Gain visibility into Snowflake usage, optimize performance and automate savings with the click of a button.",
+  openGraph: {
+    title: "SELECT | Snowflake optimization & cost management platform",
+    description:
+      "Gain visibility into Snowflake usage, optimize performance and automate savings with the click of a button.",
+    url: "https://select.dev/",
+    type: "website",
+    images: "/og-image.jpg",
+  },
 };
 
 export default function RootLayout({
