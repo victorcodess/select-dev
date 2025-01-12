@@ -13,12 +13,13 @@ interface ButtonLinkProps extends ComponentPropsWithoutRef<typeof Link> {
 const sizeStyles = {
   sm: "px-3 py-1.5 text-sm",
   md: "px-4 py-2 text-sm",
-  lg: "px-6 py-3 text-base"
+  lg: "px-6 py-3 text-base",
 } as const;
 
 const variantStyles = {
-  primary: "rounded-lg bg-[#0CA6E9] font-medium text-white shadow-btn tracking-[-0.16px]",
-  ghost: "text-[#FFFFFFCC] tracking-[0.14px]"
+  primary:
+    "rounded-lg bg-[#0CA6E9] font-medium text-white shadow-btn tracking-[-0.16px]",
+  ghost: "text-[#FFFFFFCC] tracking-[0.14px]",
 } as const;
 
 export const ButtonLink = ({
@@ -34,7 +35,7 @@ export const ButtonLink = ({
         "flex items-center gap-2.5 leading-[150%]",
         sizeStyles[size],
         variantStyles[variant],
-        className
+        className,
       )}
       {...props}
     >

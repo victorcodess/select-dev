@@ -3,7 +3,7 @@ import dan from "../public/dan-corcoran.jpeg";
 
 function TestimonialCard() {
   return (
-    <div className="shadow-card flex max-w-[397.33px] flex-col gap-6 rounded-3xl border border-[#1C1D2A] bg-[#0D0E18] px-8 py-6">
+    <div className="shadow-card flex !w-full flex-col gap-6 rounded-3xl border border-[#1C1D2A] bg-[#0D0E18] px-8 py-6 md:max-w-[397.33px]">
       <p className="leading-[150%] tracking-[-0.16px] text-white/80">
         “Setup for SELECT was swift and pain-free. Within 30 minutes we had a
         full view of our Snowflake usage and cost drivers, including a level of

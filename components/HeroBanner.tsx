@@ -11,7 +11,7 @@ import caret from "../public/caret.svg";
 export const HeroBanner = () => {
   return (
     <div className="group relative">
-      <div className="bord er absolute inset-0 -left-[1px] bottom-0 right-0 top-0 mx-auto my-auto h-[33.5px] w-[197px] overflow-hidden rounded-full">
+      <div className="absolute inset-0 -left-[1px] bottom-0 right-0 top-0 mx-auto my-auto h-[33.5px] w-[197px] overflow-hidden rounded-full">
         <motion.div
           className="absolute inset-[-100%]"
           animate={{ rotate: 360 }}
@@ -26,7 +26,7 @@ export const HeroBanner = () => {
 
       <Link
         href="/"
-        className="bo rder hidd en relative flex items-center overflow-hidden rounded-[100px] border-red-400 bg-pill-radial px-[14px] py-[5px] shadow-pill backdrop-blur-[7.5px]"
+        className="relative flex items-center overflow-hidden rounded-[100px] border-red-400 bg-pill-radial px-[14px] py-[5px] shadow-pill backdrop-blur-[7.5px]"
       >
         <Image src={stars} alt="Stars" width={16} height={16} />
         <h5 className="pl-1.5 pr-2 text-sm font-medium leading-[150%] tracking-[-0.14px] text-white/90">
