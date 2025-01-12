@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
           <HeroBanner />
 
-          <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-3xl font-medium leading-[120%] tracking-[-0.64px] text-transparent md:text-5xl lg:text-[64px]">
+          <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-3xl font-medium lg:!leading-[120%] tracking-[-0.64px] text-transparent md:text-5xl lg:text-[64px]">
             The Snowflake optimization and cost management platform
           </h1>
 
