@@ -19,11 +19,11 @@ export default function Home() {
           alt="grain"
           className="bord er absolute top-0 -z-10 min-h-[740px] w-full"
         />
-        <Image
+        {/* <Image
           src={heroGrad}
           alt="gradient"
           className="absolute top-[45px] -z-20 min-h-[540px] w-full"
-        />
+        /> */}
 
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
           <HeroBanner />
@@ -55,8 +55,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="overflow-hidde relative w-full px-[100px]">
-          <div className="[1427.5px] absolute left-0 right-0 top-[-500px] -z-10 mx-auto hidden h-[535.32px] w-full border bg-hero-radial" />
+        <div className="overflow-hidde relative flex w-full items-center justify-center px-[100px]">
+          <div className="bor der absolute -top-[467px] -z-10 h-[500px] w-full max-w-[1027px] bg-hero-radial opacity-40" />
+
           <Image src={dashboard} alt="Dashboard" className="" />
         </div>
       </section>
