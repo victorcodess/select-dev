@@ -1,14 +1,12 @@
 import Image from "next/image";
 import caret from "../public/caret.svg";
 import dashboard from "../public/dashboard.svg";
-// import dashboard2 from "../public/dashboard.png"
 import heroGrain from "../public/hero-grain.png";
-import heroGrad from "../public/hero-gradient.png";
 
-import Link from "next/link";
 import { VerticalMarquee } from "@/components/VerticalMarquee";
 import TestimonialCard from "@/components/TestimonialCard";
 import { HeroBanner } from "@/components/HeroBanner";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export default function Home() {
   return (
@@ -19,11 +17,6 @@ export default function Home() {
           alt="grain"
           className="bord er absolute top-0 -z-10 min-h-[740px] w-full"
         />
-        {/* <Image
-          src={heroGrad}
-          alt="gradient"
-          className="absolute top-[45px] -z-20 min-h-[540px] w-full"
-        /> */}
 
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
           <HeroBanner />
@@ -38,20 +31,20 @@ export default function Home() {
           </p>
 
           <div className="mt-5 flex items-center gap-4">
-            <Link
+            <ButtonLink
               href="https://cal.com/"
-              className="rounded-xl bg-[#0CA6E9] px-6 py-3 text-base font-medium leading-[150%] tracking-[-0.16px] text-white shadow-btn"
+              variant="primary"
+              size="lg"
+              className="rounded-xl"
+              aria-label="Book a Demo"
             >
               Book a Demo
-            </Link>
+            </ButtonLink>
 
-            <Link
-              href="/login"
-              className="flex gap-2.5 px-6 py-3 text-sm leading-[150%] tracking-[0.14px] text-white"
-            >
-              <span>Start Free Trial</span>
-              <Image src={caret} alt="Caret right" className="w-2" />
-            </Link>
+            <ButtonLink href="/login" size="lg">
+              <span className="text-base text-white">Start Free Trial</span>
+              <Image src={caret} alt="" className="w-2" aria-hidden="true" />
+            </ButtonLink>
           </div>
         </div>
 
@@ -75,47 +68,29 @@ export default function Home() {
         <div className="flex-co relative flex h-[700px] w-full max-w-[1240px] items-start gap-6">
           <div className="pointer-events-none absolute top-0 z-20 h-full w-full bg-testimonial-linear" />
 
-          <VerticalMarquee
-            speed={20}
-            direction={"down"}
-            gap={24}
-            className="h-full w-full"
-          >
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-          </VerticalMarquee>
-
-          <VerticalMarquee
-            speed={20}
-            direction={"up"}
-            gap={24}
-            className="h-full w-full"
-          >
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-          </VerticalMarquee>
-
-          <VerticalMarquee
-            speed={20}
-            direction={"down"}
-            gap={24}
-            className="h-full w-full"
-          >
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-            <TestimonialCard />
-          </VerticalMarquee>
+          {[
+            { direction: "down" as const },
+            { direction: "up" as const },
+            { direction: "down" as const },
+          ].map((config, index) => (
+            <VerticalMarquee
+              key={index}
+              speed={20}
+              direction={config.direction}
+              gap={24}
+              className="h-full w-full"
+              aria-label={`Testimonials column ${index + 1}`}
+            >
+              {Array(6)
+                .fill(null)
+                .map((_, cardIndex) => (
+                  <TestimonialCard
+                    key={cardIndex}
+                    aria-label={`Testimonial ${cardIndex + 1}`}
+                  />
+                ))}
+            </VerticalMarquee>
+          ))}
         </div>
       </section>
     </main>

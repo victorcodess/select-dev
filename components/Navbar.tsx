@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "../public/logo.svg";
 import chevron from "../public/chevron.svg";
 import Link from "next/link";
+import { ButtonLink } from "./ButtonLink";
 
 function Navbar() {
   return (
@@ -53,19 +54,14 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center gap-5 justify-self-end">
-          <Link
-            href="/login"
-            className="text-sm leading-[150%] tracking-[0.14px] text-[#FFFFFFCC]"
-          >
+        <div className="flex items-center gap-2 justify-self-end">
+          <ButtonLink href="/login" size="sm">
             Log in
-          </Link>
-          <Link
-            href="https://cal.com/"
-            className="rounded-lg bg-[#0CA6E9] px-3 py-1.5 text-sm font-medium leading-[150%] tracking-[-0.14px] text-white shadow-btn"
-          >
+          </ButtonLink>
+
+          <ButtonLink href="https://cal.com/" variant="primary" size="sm">
             Book a Demo
-          </Link>
+          </ButtonLink>
         </div>
       </div>
     </nav>
