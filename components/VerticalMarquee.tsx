@@ -31,7 +31,7 @@ export const VerticalMarquee: React.FC<MarqueeProps> = ({
 
   const marqueeVariants = {
     animate: {
-      y: direction === "up" ? [-contentHeight, 0] : [0, -contentHeight],
+      y: direction === "down" ? [-contentHeight, 0] : [0, -contentHeight],
     },
   };
 
@@ -54,7 +54,7 @@ export const VerticalMarquee: React.FC<MarqueeProps> = ({
           style={{ gap: `${gap}px` }}
         >
           {React.Children.map(children, (child) => (
-            <div className={`py-${gap / 2} mt-${gap}`}>{child}</div>
+            <div className={`py-${gap / 2} first:mt-6`}>{child}</div>
           ))}
         </div>
         <div
@@ -63,7 +63,7 @@ export const VerticalMarquee: React.FC<MarqueeProps> = ({
           aria-hidden="true"
         >
           {React.Children.map(children, (child) => (
-            <div className={`py-${gap / 2}`}>{child}</div>
+            <div className={`py-${gap / 2} first:mt-6`}>{child}</div>
           ))}
         </div>
       </motion.div>
