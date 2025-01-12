@@ -22,7 +22,7 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 justify-self-center lg:flex">
-            <div className="flex cursor-pointer items-center gap-1">
+            <div className="flex cursor-pointer items-center gap-1 transition-colors duration-300 hover:opacity-75">
               <h4 className="text-sm leading-[150%] tracking-[0.14px]">
                 Features
               </h4>
@@ -33,7 +33,7 @@ function Navbar() {
               />
             </div>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 transition-colors duration-300 hover:opacity-75">
               <Link
                 href="/pricing"
                 className="text-sm leading-[150%] tracking-[0.14px]"
@@ -42,7 +42,7 @@ function Navbar() {
               </Link>
             </div>
 
-            <div className="flex cursor-pointer items-center gap-1">
+            <div className="flex cursor-pointer items-center gap-1 transition-colors duration-300 hover:opacity-75">
               <h4 className="text-sm leading-[150%] tracking-[0.14px]">
                 Resources
               </h4>
@@ -53,7 +53,7 @@ function Navbar() {
               />
             </div>
 
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 transition-colors duration-300 hover:opacity-75">
               <Link
                 href="/about"
                 className="text-sm leading-[150%] tracking-[0.14px]"
@@ -65,10 +65,10 @@ function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden items-center gap-2 justify-self-end lg:flex">
-            <ButtonLink href="/login" size="sm">
+            <ButtonLink href="/app" size="sm">
               Log in
             </ButtonLink>
-            <ButtonLink href="https://cal.com/" variant="primary" size="sm">
+            <ButtonLink href="/demo" variant="primary" size="sm">
               Book a Demo
             </ButtonLink>
           </div>

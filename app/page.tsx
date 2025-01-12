@@ -19,7 +19,7 @@ export default function Home() {
         />
 
         <div className="flex w-full max-w-[1014px] flex-col items-center justify-center gap-5">
-          <HeroBanner />
+          <HeroBanner src="/changelog">Introducing Insights</HeroBanner>
 
           <h1 className="max-w-[960px] bg-gradient-to-b from-white from-[8.12%] to-[#989EAA] to-[109.09%] !bg-clip-text text-center text-3xl font-medium tracking-[-0.64px] text-transparent md:text-5xl lg:text-[64px] lg:!leading-[120%]">
             The Snowflake optimization and cost management platform
@@ -32,7 +32,7 @@ export default function Home() {
 
           <div className="mt-5 flex flex-col items-center gap-4 md:flex-row">
             <ButtonLink
-              href="https://cal.com/"
+              href="/demo"
               variant="primary"
               size="lg"
               className="rounded-xl"
@@ -41,7 +41,7 @@ export default function Home() {
               Book a Demo
             </ButtonLink>
 
-            <ButtonLink href="/login" size="lg">
+            <ButtonLink href="/app" size="lg">
               <span className="text-base text-white">Start Free Trial</span>
               <Image src={caret} alt="" className="w-2" aria-hidden="true" />
             </ButtonLink>
@@ -65,7 +65,7 @@ export default function Home() {
           <h4 className="text-xs font-medium uppercase leading-[100%] tracking-[1.2px] text-[#38BDF9]">
             testimonials
           </h4>
-          <h2 className="text-center text-2xl font-medium leading-[130%] tracking-[-0.48px] md:text-3xl lg:max-w-[628px] lg:text-5xl">
+          <h2 className="text-center text-2xl font-medium tracking-[-0.48px] md:text-3xl lg:max-w-[628px] lg:text-5xl xl:!leading-[130%]">
             Supercharging thousands of Snowflake users
           </h2>
         </div>
@@ -73,6 +73,7 @@ export default function Home() {
         <div className="relative flex h-[700px] w-full max-w-[1240px] flex-col items-center justify-center gap-6 overflow-hidden xl:flex-row xl:items-start">
           <div className="pointer-events-none absolute top-0 z-20 h-full w-full bg-testimonial-linear" />
 
+          {/* Mobile Cards - A more optimal approach will be implemented as soon as the project begins */}
           <div className="flex w-full items-center justify-center xl:!hidden">
             {[{ direction: "down" as const }].map((config, index) => (
               <VerticalMarquee
@@ -95,6 +96,7 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Desktop Cards */}
           <div className="hidden w-full gap-6 pr-0 xl:flex">
             {[
               { direction: "down" as const },

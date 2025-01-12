@@ -18,8 +18,9 @@ const sizeStyles = {
 
 const variantStyles = {
   primary:
-    "rounded-lg bg-[#0CA6E9] font-medium text-white shadow-btn tracking-[-0.16px]",
-  ghost: "text-[#FFFFFFCC] tracking-[0.14px]",
+    "rounded-lg bg-[#0CA6E9] hover:bg-[#38BDF8] transition-colors duration-300 font-medium text-white shadow-btn tracking-[-0.16px]",
+  ghost:
+    "text-[#FFFFFFCC] tracking-[0.14px] hover:opacity-75 transition-colors duration-300",
 } as const;
 
 export const ButtonLink = ({
