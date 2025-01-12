@@ -11,7 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "SELECT | Snowflake optimization & cost management platform",
-  description: "Gain visibility into Snowflake usage, optimize performance and automate savings with the click of a button.",
+  description:
+    "Gain visibility into Snowflake usage, optimize performance and automate savings with the click of a button.",
 };
 
 export default function RootLayout({

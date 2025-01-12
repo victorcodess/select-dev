@@ -18,6 +18,7 @@ export default {
       boxShadow: {
         btn: "0px 2px 8px 0px rgba(0, 0, 0, 0.16), 0px 1px 0px 0px #0088C5, inset 1px 1px 0px 0px rgba(255, 255, 255, 0.30)",
         pill: "0px 1px 0px 0px rgba(0, 0, 0, 0.70), 0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset;",
+        card: "0px 0px 0px 1px #000, 0px 0px 10px 0px rgba(0, 0, 0, 0.70)",
       },
       backgroundImage: {
         "pill-radial":
@@ -26,6 +27,8 @@ export default {
           "radial-gradient(68.2% 45.6% at 50% 100%, #00C0FF 10%, #0B0C15 100%)",
         "hero-radial-2":
           "radial-gradient(85.6% 38.7% at 50% 94.7%, rgba(11, 12, 21, 0.16) 0%, #0B0C15 100%)",
+        "testimonial-linear":
+          "linear-gradient(180deg, #0B0C15 0%, #0B0C1500 35%, #0B0C1500 65%, #0B0C15 100%);",
       },
     },
   },
